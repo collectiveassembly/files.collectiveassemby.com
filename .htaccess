@@ -1,0 +1,14 @@
+# media temple default
+AddHandler php-legacy .php
+
+
+
+# dropbox integration
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^(.*)$ http://dl.dropbox.com/u/1154870/files/$1 [L,QSA]
+</IfModule>
+
+# BEGIN (mt) controlled settings
+AddHandler php-stable .php
+# END (mt) controlled settings
